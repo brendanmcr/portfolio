@@ -30,13 +30,13 @@ test("statuses are from the allowed set", () => {
   }
 });
 
-test("only shipped projects carry a link — no vaporware links", () => {
+test("every project links to its real repo under the account", () => {
   for (const p of projects) {
-    if (p.status !== "shipped") {
-      assert.equal(p.link, undefined, `${p.slug}: unshipped project has a link`);
-    } else {
-      assert.match(p.link, /^https:\/\//, `${p.slug}: shipped without a link`);
-    }
+    assert.match(
+      p.link,
+      /^https:\/\/github\.com\/brendanmcr\//,
+      `${p.slug}: missing or foreign repo link`
+    );
   }
 });
 

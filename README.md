@@ -11,7 +11,7 @@ Personal portfolio site for [@brendanmcr](https://github.com/brendanmcr) — Kan
 - Next.js 16, static export (`output: "export"`)
 - Tailwind CSS 4 + daisyUI 5 (custom `paper` theme)
 - Content lives in one testable module: [`lib/content.mjs`](lib/content.mjs)
-- Tests: Node's built-in `node:test` runner — including a rule that unshipped projects can never carry a link (no vaporware)
+- Tests: Node's built-in `node:test` runner — including a rule that every project must link to its real repo
 - CI + GitHub Pages deploy via Actions
 
 ## Run it
